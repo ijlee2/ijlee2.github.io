@@ -19,8 +19,8 @@ $(document).ready(function() {
         const index = $(".ijl-menu-items-desktop").index(this);
         
         // Highlight the menu item
-        $("#ijl-menu-desktop > *").removeClass("active green darken-2");
-        $(`#ijl-menu-desktop > li:nth-of-type(${index + 1})`).addClass("active green darken-2");
+        $("#ijl-menu-desktop > *").removeClass("active cyan darken-3");
+        $(`#ijl-menu-desktop > li:nth-of-type(${index + 1})`).addClass("active cyan darken-3");
 
         // Find where to go and how fast
         const section     = $(this).attr("href");
@@ -29,4 +29,6 @@ $(document).ready(function() {
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
+
+    document.querySelector(".cover_video").playbackRate = 1.4;
 });

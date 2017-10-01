@@ -45,11 +45,13 @@ h1 {
 }
 
 h2 {
-    font-size: 2em;
+    font-size     : 4.2em;
+    letter-spacing: 0.5em;
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size     : 1.4em;
+    letter-spacing: 0.04em;
 }
 
 strong {
@@ -57,20 +59,6 @@ strong {
 }
 
 /* Separators */
-article header {
-    background-image : url("../images/pattern_dark.png");
-    background-repeat: repeat;
-    display          : flex;
-    justify-content  : center;
-    flex-direction   : column;
-    height           : 240px;
-}
-
-article header h2 {
-    font-size     : 4.2em;
-    letter-spacing: 0.5em;
-}
-
 .ijl-attacher-1 {
     margin-bottom: 0;
 }
@@ -119,6 +107,16 @@ nav .ijl-menu-items-desktop {
 
 nav #ijl-menu-desktop li:last-child {
     margin-right: 1em;
+}
+
+/* Articles */
+article header {
+    background-image : url("../images/pattern_dark.png");
+    background-repeat: repeat;
+    display          : flex;
+    justify-content  : center;
+    flex-direction   : column;
+    height           : 240px;
 }
 
 /* Footer */
@@ -221,7 +219,7 @@ img.circle {
             filter: brightness(1.33) contrast(1.6) opacity(0.42) sepia(0.06) saturate(1.15);
     position  : absolute;
     width     : 100%;
-    height    : calc(100% + var(--height-nav));
+    height    : calc(100% + 2.25*var(--height-nav));
     top       : 50%;
     left      : 50%;
     transform : translate(-50%, calc(-50% + var(--height-nav)));
