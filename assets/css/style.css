@@ -227,6 +227,25 @@ img.circle {
     z-index   : -1;
 }
 
+/* Portfolio */
+.parallax-container {
+    height: 300px;
+}
+
+.parallax {
+    display        : flex;
+    justify-content: center;
+    flex-direction : column;
+}
+
+.ijl-parallax-title {
+    font-family   : var(--font-highlight);
+    font-size     : 6em;
+    letter-spacing: 0.2em;
+    position      : absolute;
+    width         : 100%;
+}
+
 /* Writers */
 .mai-writer:hover {
     transform : scale(1.05);

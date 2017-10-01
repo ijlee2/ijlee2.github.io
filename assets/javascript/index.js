@@ -1,5 +1,5 @@
 // Descriptions of me
-const iam        = ["Analyst", "Coffee Lover", "Cook", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner"];
+const iam        = ["Analyst", "Coffee Lover", "Cook", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
@@ -22,11 +22,11 @@ $(document).ready(function() {
     // Scroll to anchor tags
     $(".brand-logo").click(function() {
         // Remove highlight
-        $("#ijl-menu-desktop > *").removeClass("active green darken-2");
+        $("#ijl-menu-desktop > *").removeClass("active cyan darken-3");
 
         // Find where to go and how fast
-        const destination = 0 - $("nav").height();
-        const duration    = Math.trunc(Math.abs(destination - $(document).scrollTop()) / 1.25);
+        const destination = -$("nav").height();
+        const duration    = Math.trunc(0.75 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -43,7 +43,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = $(section).offset().top - $("nav").height();
-        const duration    = Math.trunc(Math.abs(destination - $(document).scrollTop()) / 1.25);
+        const duration    = Math.trunc(0.75 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -91,4 +91,6 @@ $(document).ready(function() {
 
     // Video
     document.querySelector(".cover_video").playbackRate = 1.4;
+
+    $(".parallax").parallax();
 });
