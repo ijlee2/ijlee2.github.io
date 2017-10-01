@@ -8,7 +8,7 @@ $(document).ready(function() {
         $("#ijl-menu-desktop > *").removeClass("active green darken-2");
 
         // Find where to go and how fast
-        const destination = 0;
+        const destination = 0 - $("nav").height();
         const duration    = Math.trunc(Math.abs(destination - $(document).scrollTop()) / 1.25);
         
         $("html, body").animate({"scrollTop": destination}, duration);
@@ -24,7 +24,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const section     = $(this).attr("href");
-        const destination = $(section).offset().top;
+        const destination = $(section).offset().top - $("nav").height();
         const duration    = Math.trunc(Math.abs(destination - $(document).scrollTop()) / 1.25);
         
         $("html, body").animate({"scrollTop": destination}, duration);
