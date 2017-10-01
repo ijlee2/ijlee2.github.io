@@ -1,24 +1,8 @@
-const iam = [
-    "Developer",
-    "Engineer",
-    "Mathematician",
-    "Rock Climber",
-    "Public Speaker",
-    "Cook",
-    "Runner",
-    "Coffee Lover",
-    "Designer",
-    "Educator",
-    "Researcher",
-    "Friend",
-    "Listener",
-    "Leader",
-    "Helper",
-    "Music Lover"
-];
-
+// Descriptions of me
+const iam        = ["Analyst", "Coffee Lover", "Cook", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner"];
 const iam_length = iam.length;
 
+// Allowable ASCII values
 const ascii = [];
 
 for (let i =  32; i <= 126; i++) ascii.push(i);
@@ -65,15 +49,14 @@ $(document).ready(function() {
     });
 
     // Splash
-    setInterval(() => {
-        const str_current = $("#who-am-i").text();
-        let   str_new;
+    let str_previous = "", str_current = $("#who-am-i").text(), str_new;
 
+    setInterval(() => {
         // Make sure that a new description appears
         do {
             str_new = iam[Math.floor(iam_length * Math.random())];
 
-        } while (str_new === str_current);
+        } while (str_new === str_current || str_new === str_previous);
 
         // Display random characters during transition
         let str_current_array = $("#who-am-i").text().split("");
@@ -91,16 +74,20 @@ $(document).ready(function() {
 
             i++;
 
-            if (i === 18) {
+            if (i === 20) {
                 // Display new text
                 $("#who-am-i").text(str_new);
+
+                // Update
+                str_previous = str_current;
+                str_current  = str_new;
 
                 clearInterval(transition);
             }
 
         }, 25);
 
-    }, 2000);
+    }, 2500);
 
     // Video
     document.querySelector(".cover_video").playbackRate = 1.4;
