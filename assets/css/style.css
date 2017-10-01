@@ -239,10 +239,16 @@ img.circle {
     flex-direction : column;
 }
 
-.ijl-parallax-title {
+.parallax > img {
+    object-fit: fill !important;
+    width     : 100%;
+}
+
+.parallax > div {
     font-family   : var(--font-highlight);
-    font-size     : 4.8em;
+    font-size     : 3.6em;
     letter-spacing: 0.24em;
+    line-height   : 1.2em;
     text-shadow   : 0 0 15px var(--color-blue-grey-lighten-5);
     position      : absolute;
     width         : 100%;
