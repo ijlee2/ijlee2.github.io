@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="description" content="Isaac J. Lee - full stack developer with 8.5 year experience in research and teaching">
+        <meta name="description" content="Isaac J. Lee - Full Stack Developer">
         <meta name="author" content="Isaac J. Lee">
         <title>Isaac J. Lee</title>
 
@@ -13,7 +13,7 @@
         <!-- Import fonts -->
         <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Julius+Sans+One|Slabo+27px" rel="stylesheet">
 
         <!-- Import Materialize -->
         <link type="text/css" rel="stylesheet" href="assets/css/materialize.min.css" media="screen,projection">
@@ -29,131 +29,35 @@
                 <a href="#" data-activates="mai-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                 
                 <!-- Desktop -->
-                <ul id="mai-dropdown-writer" class="dropdown-content">
-                    <li><a href="profile.html">Profile</a></li>
-                    <li><a href="settings.html">Settings</a></li>
-                    <li><a href="#">Logout</a></li>
-
-                    <li class="divider"></li>
-
-                    <li><a href="meet-mai.html">Meet Mai</a></li>
-                    <li><a href="meet-mai-team.html">Meet Mai Team</a></li>
-                </ul>
-
                 <ul class="right hide-on-med-and-down" id="mai-menu-desktop">
-                    <li><a class="mai-menu-desktop-items" href="writers.html">Services</a></li>
-                    <li><a class="mai-menu-desktop-items" href="writers.html">Portfolio</a></li>
-                    <li><a class="mai-menu-desktop-items" href="upload-photos.html">About Me</a></li>
-                    <li><a class="mai-menu-desktop-items" href="writers.html">Contact</a></li>
+                    <li><a class="mai-menu-desktop-items" href="#services">Services</a></li>
+                    <li><a class="mai-menu-desktop-items" href="#portfolio">Portfolio</a></li>
+                    <li><a class="mai-menu-desktop-items" href="#about-me">About Me</a></li>
+                    <li><a class="mai-menu-desktop-items" href="#contact">Contact</a></li>
                 </ul>
                 
                 <!-- Mobile -->
                 <ul class="side-nav" id="mai-menu-mobile">
-                    <li class="black-text center-align">Isaac Lee</li>
-
-                    <li class="divider"></li>
-
-                    <li><a class="mai-menu-mobile-items" href="index.html">Home</a></li>
-                    <li class="green lighten-3"><a class="mai-menu-mobile-items" href="upload-photos.html">Compose</a></li>
-                    <li><a class="mai-menu-mobile-items" href="writers.html">Find Writers</a></li>
-
-                    <li class="divider"></li>
-
-                    <li><a class="mai-menu-mobile-items" href="profile.html">Profile</a></li>
-                    <li><a class="mai-menu-mobile-items" href="settings.html">Settings</a></li>
-                    <li><a class="mai-menu-mobile-items" href="#">Logout</a></li>
-
-                    <li class="divider"></li>
-
-                    <li><a class="mai-menu-mobile-items" class="mai-menu-mobile-items" href="meet-mai.html">Meet Mai</a></li>
-                    <li><a class="mai-menu-mobile-items" href="meet-mai-team.html">Meet Mai Team</a></li>
-
-                    <li class="divider"></li>
-
-                    <!-- TODO: For testing only. Remove these links later. -->
-                    <li class="grey lighten-1"><a class="mai-menu-mobile-items" href="story.html">Story</a></li>
+                    <li><a class="mai-menu-mobile-items" href="#services">Services</a></li>
+                    <li><a class="mai-menu-mobile-items" href="#portfolio">Portfolio</a></li>
+                    <li><a class="mai-menu-mobile-items" href="#about-me">About Me</a></li>
+                    <li><a class="mai-menu-mobile-items" href="#contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
 
         <div class="container">
+            <!-- TODO: Remove valign-wrapper for mobile -->
             <div class="row mai-signup-wrapper valign-wrapper">
-                <div class="col s10 offset-s1 m8 offset-m2 l7 offset-l4 xl5 offset-xl4">
+                <div class="col s12 xl10 offset-xl1">
                     <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h1 class="brand-logo mai-attacher-1"><img class="responsive-img" src="../assets/images/mai.png" alt="Mai logo">Mai</h1>
-                            <p>Everyone has a story to tell.</p>
-                        </div>
-
-                        <div class="col s10 offset-s1">
-                            <form id="mai-form-signup" action="/api/signup" method="POST">
-                                <div class="input-field">
-                                    <label for="mai-fullname" class="blue-grey-text text-darken-2">Full name</label>
-                                    <input type="text" name="fullname" id="mai-fullname" class="validate" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label for="mai-email" class="blue-grey-text text-darken-2">Email</label>
-                                    <input type="text" name="email" id="mai-email" class="validate" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label for="mai-username" class="blue-grey-text text-darken-2">Username</label>
-                                    <input type="text" name="username" id="mai-username" class="validate" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label for="mai-password" class="blue-grey-text text-darken-2">Password</label>
-                                    <input type="password" name="password" id="mai-password" class="validate" required>
-                                </div>
-
-                                <div class="mai-separator-2"></div>
-
-                                <button type="submit" class="btn-large waves-effect waves-light" title="Click to sign up.">Sign up</button>
-                            </form>
-
-                            <div class="mai-separator-2"></div>
-                        </div>
-
-                        <div class="col s10 offset-s1">
-                            <a href="javascript:displayLogin();">Have an account? Log in</a>.
-
+                        <div class="col s8 offset-s2">
                             <div class="mai-separator-3"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row mai-login-wrapper valign-wrapper">
-                <div class="col s10 offset-s1 m8 offset-m2 l7 offset-l4 xl5 offset-xl4">
-                    <div class="row">
-                        <div class="col s10 offset-s1">
-                            <h1 class="brand-logo black-text mai-attacher-1"><img class="responsive-img" src="../assets/images/mai.png" alt="Mai logo">Mai</h1>
-                            <p class="black-text">Hear them out.</p>
-                        </div>
-
-                        <div class="col s10 offset-s1">
-                            <form id="mai-form-login" action="/api/login" method="POST">
-                                <div class="input-field">
-                                    <label for="mai-login-username" class="blue-grey-text text-darken-2">Username</label>
-                                    <input type="text" name="username" id="mai-login-username" class="validate" required>
-                                </div>
-
-                                <div class="input-field">
-                                    <label for="mai-login-password" class="blue-grey-text text-darken-2">Password</label>
-                                    <input type="password" name="password" id="mai-login-password" class="validate" required>
-                                </div>
-
-                                <div class="mai-separator-2"></div>
-
-                                <button type="submit" class="btn-large waves-effect waves-light" title="Click to log in.">Log in</button>
-                            </form>
-
-                            <div class="mai-separator-2"></div>
-                        </div>
-
-                        <div class="col s10 offset-s1">
-                            <a href="javascript:displaySignup();">Don't have an account? Sign up</a>.
+                            
+                            <h1>Isaac J. Lee</h1>
+                            <p>Full stack developer with 8.5 year experience in <strong>research + teaching</strong>.</p>
+                            <p>Driven to write <strong>simple, lasting code</strong> and embed the <strong>latest technologies</strong> with zero fear.</p>
+                            <p>Pro in <strong>continuous learning + communication + collaboration</strong>.</p>
 
                             <div class="mai-separator-3"></div>
                         </div>
@@ -215,29 +119,9 @@
 
         <!-- Import jQuery before materialize.js -->
         <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-        <script type="text/javascript" src="../assets/javascript/materialize/materialize.min.js"></script>
+        <script type="text/javascript" src="assets/javascript/materialize.min.js"></script>
         
         <!-- Custom JavaScript -->
-        <script type="text/javascript">
-            function displayLogin() {
-                $(".mai-signup-wrapper").fadeOut(200);
-                $(".mai-login-wrapper").fadeIn(1000);
-            }
-
-            function displaySignup() {
-                $(".mai-login-wrapper").fadeOut(200);
-                $(".mai-signup-wrapper").fadeIn(1000);
-            }
-
-            $(document).ready(function() {
-                displaySignup();
-
-                // Dropdown menu
-                $(".dropdown-button").dropdown();
-
-                // Navbar for mobile
-                $(".button-collapse").sideNav();
-            });
-        </script>
+        <script type="text/javascript" src="assets/javascript/index.js"></script>
     </body>
 </html>

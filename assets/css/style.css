@@ -7,7 +7,7 @@
 *****************************************************************************/
 :root {
     /* Define fonts */
-    --font-main     : "Nunito", sans-serif;
+    --font-main     : "Slabo 27px", serif;
     --font-highlight: "Julius Sans One", sans-serif;
 
     /* Define heights */
@@ -38,7 +38,7 @@ h1 {
     font-family   : var(--font-highlight);
     font-size     : 2.8em;
     height        : 1.4em;
-    letter-spacing: 0.01em;
+    letter-spacing: 0.05em;
 }
 
 h2 {
@@ -67,13 +67,15 @@ strong {
 }
 
 .mai-separator-3 {
-    height: 2em;
+    height: 1.6em;
 }
 
 /* Navbar */
 nav {
-    height     : var(--height-nav);
-    line-height: var(--height-nav);
+    font-family   : var(--font-highlight);
+    letter-spacing: 0.02em;
+    height        : var(--height-nav);
+    line-height   : var(--height-nav);
 }
 
 nav i, nav [class^="mdi-"], nav [class*="mdi-"], nav i.material-icons {
@@ -87,10 +89,8 @@ nav .button-collapse i {
 }
 
 nav .brand-logo {
-    font-family   : var(--font-highlight);
-    font-size     : 1.1em;
-    letter-spacing: 0.0 4em;
-    margin-left   : 1em;
+    font-size  : 1.1em;
+    margin-left: 1em;
 }
 
 nav .brand-logo img {
@@ -98,8 +98,7 @@ nav .brand-logo img {
 }
 
 nav .mai-menu-desktop-items {
-    font-size     : 0.75em;
-    letter-spacing: 0.01em;
+    font-size: 0.75em;
 }
 
 nav #mai-menu-desktop li:last-child {
