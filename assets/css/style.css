@@ -14,7 +14,8 @@
     --height-nav: 40px;
 
     /* Define color scheme */
-    --color-white-transparent: rgba(255, 255, 255, 0.93);
+    --color-blue-grey-lighten-5: #bbb;
+    --color-white-transparent  : rgba(255, 255, 255, 0.93);
 }
 
 
@@ -229,7 +230,7 @@ img.circle {
 
 /* Portfolio */
 .parallax-container {
-    height: 300px;
+    height: 360px;
 }
 
 .parallax {
@@ -240,8 +241,9 @@ img.circle {
 
 .ijl-parallax-title {
     font-family   : var(--font-highlight);
-    font-size     : 6em;
-    letter-spacing: 0.2em;
+    font-size     : 4.8em;
+    letter-spacing: 0.24em;
+    text-shadow   : 0 0 15px var(--color-blue-grey-lighten-5);
     position      : absolute;
     width         : 100%;
 }
