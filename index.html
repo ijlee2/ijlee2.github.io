@@ -23,28 +23,32 @@
     </head>
     <body class="blue-grey lighten-5">
         <!-- Navbar -->
-        <nav>
-            <div class="nav-wrapper grey darken-4">
-                <a href="index.html" class="brand-logo">IJL</a>
-                <a href="#" data-activates="mai-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-                
-                <!-- Desktop -->
-                <ul class="right hide-on-med-and-down" id="ijl-desktop">
-                    <li><a class="ijl-desktop-items" href="#expertise">Expertise</a></li>
-                    <li><a class="ijl-desktop-items" href="#portfolio">Portfolio</a></li>
-                    <li><a class="ijl-desktop-items" href="#about-me">About Me</a></li>
-                    <li><a class="ijl-desktop-items" href="#contact">Contact</a></li>
-                </ul>
-                
-                <!-- Mobile -->
-                <ul class="side-nav" id="mai-menu-mobile">
-                    <li><a class="mai-menu-mobile-items" href="#expertise">Expertise</a></li>
-                    <li><a class="mai-menu-mobile-items" href="#portfolio">Portfolio</a></li>
-                    <li><a class="mai-menu-mobile-items" href="#about-me">About Me</a></li>
-                    <li><a class="mai-menu-mobile-items" href="#contact">Contact</a></li>
-                </ul>
+        <header>
+            <div class="navbar-fixed">
+                <nav>
+                    <div class="nav-wrapper grey darken-4">
+                        <a href="#" class="brand-logo">IJL</a>
+                        <a href="#" data-activates="ijl-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+                        
+                        <!-- Desktop -->
+                        <ul class="right hide-on-med-and-down" id="ijl-menu-desktop">
+                            <li><a href="#expertise" class="ijl-menu-items-desktop">Expertise</a></li>
+                            <li><a href="#portfolio" class="ijl-menu-items-desktop">Portfolio</a></li>
+                            <li><a href="#about-me" class="ijl-menu-items-desktop">About Me</a></li>
+                            <li><a href="#contact" class="ijl-menu-items-desktop">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>
             </div>
-        </nav>
+                    
+            <!-- Mobile -->
+            <ul class="side-nav" id="ijl-menu-mobile">
+                <li><a href="#expertise" class="ijl-menu-items-mobile">Expertise</a></li>
+                <li><a href="#portfolio" class="ijl-menu-items-mobile">Portfolio</a></li>
+                <li><a href="#about-me" class="ijl-menu-items-mobile">About Me</a></li>
+                <li><a href="#contact" class="ijl-menu-items-mobile">Contact</a></li>
+            </ul>
+        </header>
 
         <div class="container">
             <!-- TODO: Remove valign-wrapper for mobile -->
