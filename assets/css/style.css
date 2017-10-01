@@ -25,12 +25,10 @@
 *****************************************************************************/
 /* Window */
 body {
+    background-image : url("../images/pattern_light.png");
+    background-repeat: repeat;
     font-family: var(--font-main);
     font-size  : 20px;
-}
-
-.mai-mobile-page {
-    display: none;
 }
 
 /* Fonts */
@@ -58,10 +56,12 @@ strong {
 
 /* Vertical separators */
 article header {
-    display        : flex;
-    justify-content: center;
-    flex-direction : column;
-    height         : 240px;
+    background-image : url("../images/pattern_dark.png");
+    background-repeat: repeat;
+    display          : flex;
+    justify-content  : center;
+    flex-direction   : column;
+    height           : 240px;
 }
 
 article header h2 {
