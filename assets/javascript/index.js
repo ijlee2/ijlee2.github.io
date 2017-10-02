@@ -1,5 +1,5 @@
 // Descriptions of me
-const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Volunteer"];
+const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Photographer", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
