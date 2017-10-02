@@ -1,5 +1,5 @@
 // Descriptions of me
-const iam        = ["Analyst", "Coffee Lover", "Cook", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Volunteer"];
+const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
@@ -92,5 +92,7 @@ $(document).ready(function() {
     // Video
     document.querySelector(".cover_video").playbackRate = 1.4;
 
+    // Portfolio
     $(".parallax").parallax();
+    $(".chips").material_chip();
 });
