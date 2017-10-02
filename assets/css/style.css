@@ -169,6 +169,11 @@ footer a:hover {
     z-index   : -1;
 }
 
+/* Expertise */
+.ijl-expertise {
+    border-radius: 6px;
+}
+
 /* Portfolio */
 .parallax-container {
     height: 360px;

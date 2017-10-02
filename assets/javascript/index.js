@@ -1,5 +1,5 @@
 // Descriptions of me
-const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Music Lover", "Photographer", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Volunteer"];
+const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Photographer", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const destination = -$("nav").height();
-        const duration    = Math.trunc(0.5 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.45 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -43,7 +43,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = $(section).offset().top - $("nav").height();
-        const duration    = Math.trunc(0.5 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.45 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
