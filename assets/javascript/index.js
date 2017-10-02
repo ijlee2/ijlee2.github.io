@@ -1,12 +1,19 @@
+/****************************************************************************
+ ****************************************************************************
+    
+    Initialize
+    
+*****************************************************************************
+*****************************************************************************/
 // Descriptions of me
-const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Photographer", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
+const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
 const ascii = [];
 
-for (let i =  32; i <= 126; i++) ascii.push(i);
-for (let i = 179; i <= 218; i++) ascii.push(i);
+for (let i =  32; i <= 126; i++) ascii.push(String.fromCharCode(i));
+for (let i = 179; i <= 218; i++) ascii.push(String.fromCharCode(i));
 
 const ascii_length = ascii.length;
 
@@ -15,11 +22,29 @@ function collatz(n) {
     return (n % 2) ? (3*n + 1) : (n/2);
 }
 
+
+
+/****************************************************************************
+ ****************************************************************************
+    
+    Wait for user response
+    
+*****************************************************************************
+*****************************************************************************/
 $(document).ready(function() {
-    // Navbar for mobile
+    /************************************************************************
+    
+        Navbar
+
+    *************************************************************************/
     $(".button-collapse").sideNav();
 
-    // Scroll to anchor tags
+
+    /************************************************************************
+    
+        Scroll to anchor tags
+
+    *************************************************************************/
     $(".brand-logo").click(function() {
         // Remove highlight
         $("#ijl-menu-desktop > *").removeClass("active cyan darken-3");
@@ -31,7 +56,6 @@ $(document).ready(function() {
         $("html, body").animate({"scrollTop": destination}, duration);
     });
 
-    // Menu
     $(".ijl-menu-items-desktop").click(function() {
         // Find which menu item was clicked
         const index = $(".ijl-menu-items-desktop").index(this);
@@ -48,33 +72,39 @@ $(document).ready(function() {
         $("html, body").animate({"scrollTop": destination}, duration);
     });
 
-    // Splash
-    let str_previous = "", str_current = $("#who-am-i").text(), str_new;
+
+    /************************************************************************
+    
+        Splash
+
+    *************************************************************************/
+    let str_previous = "",
+        str_current  = $("#who-am-i").text(),
+        str_new;
 
     setInterval(() => {
-        // Make sure that a new description appears
+        // Make sure to display a different description
         do {
             str_new = iam[Math.floor(iam_length * Math.random())];
 
         } while (str_new === str_current || str_new === str_previous);
 
         // Display random characters during transition
-        let str_current_array = $("#who-am-i").text().split("");
-        let i = 0;
+        let str_current_array = str_current.split("");
+        let count = 0;
 
         const transition = setInterval(() => {
-            str_current_array = str_current_array.map(char => {
-                const index = collatz(char.charCodeAt(0)) % ascii_length;
-
-                return String.fromCharCode(ascii[index]);
+            str_current_array.forEach((value, index, array) => {
+                array[index] = ascii[collatz(value.charCodeAt(0)) % ascii_length];
 
             });
 
-            $("#who-am-i").text(str_current_array.join(""));
+            count++;
 
-            i++;
+            if (count < 20) {
+                $("#who-am-i").text(str_current_array.join(""));
 
-            if (i === 20) {
+            } else {
                 // Display new text
                 $("#who-am-i").text(str_new);
 
@@ -89,10 +119,16 @@ $(document).ready(function() {
 
     }, 2500);
 
-    // Video
+    // Speed up the video
     document.querySelector(".cover_video").playbackRate = 1.4;
 
-    // Portfolio
+
+    /************************************************************************
+    
+        Portfolio
+
+    *************************************************************************/
     $(".parallax").parallax();
+
     $(".chips").material_chip();
 });
