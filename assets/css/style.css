@@ -154,6 +154,7 @@ footer a:hover {
     background-color: var(--color-white-transparent);
     position        : relative;
     top             : calc(-1.5 * var(--height-nav));
+    border-radius   : 2px;
 }
 
 .cover_video {
