@@ -26,7 +26,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const destination = -$("nav").height();
-        const duration    = Math.trunc(0.75 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.5 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -43,7 +43,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = $(section).offset().top - $("nav").height();
-        const duration    = Math.trunc(0.75 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.5 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
