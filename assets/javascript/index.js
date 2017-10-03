@@ -121,7 +121,7 @@ $(document).ready(function() {
         Navbar
 
     *************************************************************************/
-    $(".button-collapse").sideNav();
+    $(".button-collapse").sideNav({"closeOnClick": true});
 
 
     /************************************************************************
@@ -162,6 +162,24 @@ $(document).ready(function() {
         const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
+    });
+
+    $(".ijl-menu-items-mobile").click(function() {
+        // Find which menu item was clicked
+        const index = $(".ijl-menu-items-mobile").index(this);
+        
+        // Highlight the menu item
+        $("#ijl-menu-mobile > *").removeClass("active");
+        $(`#ijl-menu-mobile > li:nth-of-type(${index + 3})`).addClass("active");
+
+        // Find where to go and how fast
+        const section     = $(this).attr("href");
+        const destination = $(section).offset().top - $("nav").height();
+        const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
+        
+        $("html, body").animate({"scrollTop": destination}, duration);
+
+        // Close the mobile menu
     });
 
 

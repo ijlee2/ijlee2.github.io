@@ -102,16 +102,27 @@ nav .brand-logo {
     margin-left: 1em;
 }
 
-nav .brand-logo img {
-    height: 100%;
-}
-
 nav .ijl-menu-items-desktop {
     font-size: 0.75em;
 }
 
 nav #ijl-menu-desktop li:last-child {
     margin-right: 1em;
+}
+
+.brand-logo-mobile {
+    font-family   : var(--font-highlight);
+    font-size     : 1.5em;
+    letter-spacing: 0.3em;
+    padding-top   : 0.5em;
+    padding-bottom: 0.4em;
+}
+
+.ijl-menu-items-mobile {
+    font-size     : 1em !important;
+    height        : 100% !important;
+    padding-top   : 0.75em !important;
+    padding-bottom: 0.75em !important;
 }
 
 /* Articles */
@@ -202,6 +213,10 @@ footer a:hover {
     text-shadow   : 0 0 4px var(--color-blue-grey-lighten-5);
     position      : absolute;
     width         : 100%;
+}
+
+#portfolio li {
+    margin-top: 0.35em;
 }
 
 #portfolio a:hover {
@@ -296,25 +311,29 @@ footer a:hover {
 
     h1 {
         font-size     : 2.2em;
-        letter-spacing: calc(0.25em * 2.2/3.4);
+        letter-spacing: calc(0.25em * 17/20 * 2.2/3.4);
     }
 
     h2 {
-        font-size     : calc(4.2em * 2.2/3.4);
-        letter-spacing: calc(0.5em * 2.2/3.4);
+        font-size     : calc(4.2em * 17/20 * 2.2/3.4);
+        letter-spacing: calc(0.5em * 17/20 * 2.2/3.4);
+    }
+
+    nav .brand-logo {
+        margin-left: 0;
     }
 
     article header {
-        height: calc(240px * 2.2/3.4);
+        height: calc(240px * 17/20 * 2.2/3.4);
     }
 
     .parallax-container {
-        height: calc(360px * 2.2/3.4);
+        height: calc(360px * 17/20 * 2.2/3.4);
     }
 
     .parallax > div {
-        font-size     : calc(3.6em * 2.2/3.4);
-        letter-spacing: calc(0.22em * 2.2/3.4);
+        font-size     : calc(3.6em * 17/20 * 2.2/3.4);
+        letter-spacing: calc(0.22em * 17/20 * 2.2/3.4);
     }
 }
 
@@ -326,25 +345,25 @@ footer a:hover {
 
     h1 {
         font-size     : 1.6em;
-        letter-spacing: calc(0.25em * 1.6/3.4);
+        letter-spacing: calc(0.25em * 17/20 * 1.6/3.4);
     }
 
     h2 {
-        font-size     : calc(4.2em * 1.6/3.4);
-        letter-spacing: calc(0.5em * 1.6/3.4);
+        font-size     : calc(4.2em * 17/20 * 1.6/3.4);
+        letter-spacing: calc(0.5em * 17/20 * 1.6/3.4);
     }
 
     article header {
-        height: calc(240px * 1.6/3.4);
+        height: calc(240px * 17/20 * 1.6/3.4);
     }
 
     .parallax-container {
-        height: calc(360px * 1.6/3.4);
+        height: calc(360px * 17/20 * 1.6/3.4);
     }
 
     .parallax > div {
-        font-size     : calc(3.6em * 1.6/3.4);
-        letter-spacing: calc(0.22em * 1.6/3.4);
+        font-size     : calc(3.6em * 17/20 * 1.6/3.4);
+        letter-spacing: calc(0.22em * 17/20 * 1.6/3.4);
     }
 
     #ijl-follow-me li {
