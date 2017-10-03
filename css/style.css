@@ -103,7 +103,8 @@ nav .brand-logo {
 }
 
 nav .ijl-menu-items-desktop {
-    font-size: 0.75em;
+    font-size     : 0.75em;
+    letter-spacing: 0.1em;
 }
 
 nav #ijl-menu-desktop li:last-child {
