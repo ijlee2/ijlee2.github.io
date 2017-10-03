@@ -217,6 +217,7 @@ footer a:hover {
 /* Contact */
 #ijl-follow-me li {
     font-size    : 1.6em;
+    line-height  : 1.4em;
     float        : left;
     padding-right: 0.9em;
 }
@@ -254,6 +255,33 @@ footer a:hover {
     #ijl-device-detector {
         font-size: 3px;
     }
+
+    h1 {
+        font-size     : 2.6em;
+        letter-spacing: calc(0.25em * 2.6/3.4);
+    }
+
+    h2 {
+        font-size     : calc(4.2em * 2.6/3.4);
+        letter-spacing: calc(0.5em * 2.6/3.4);
+    }
+
+    article header {
+        height: calc(240px * 2.6/3.4);
+    }
+
+    .parallax-container {
+        height: calc(360px * 2.6/3.4);
+    }
+
+    .parallax > div {
+        font-size     : calc(3.6em * 2.6/3.4);
+        letter-spacing: calc(0.22em * 2.6/3.4);
+    }
+
+    #ijl-follow-me li {
+        line-height: 1.8em;
+    }
 }
 
 /* Tablet */
@@ -263,7 +291,8 @@ footer a:hover {
     }
 
     h1 {
-        font-size: 2.4em;
+        font-size     : 2.2em;
+        letter-spacing: calc(0.25em * 2.2/3.4);
     }
 
     h2 {
@@ -279,5 +308,14 @@ footer a:hover {
 @media all and (max-width: 600px), all and (max-device-width: 600px) {
     #ijl-device-detector {
         font-size: 1px;
+    }
+
+    h1 {
+        font-size     : 1.7em;
+        letter-spacing: calc(0.25em * 1.7/3.4);
+    }
+
+    #ijl-follow-me li {
+        line-height: 2em;
     }
 }

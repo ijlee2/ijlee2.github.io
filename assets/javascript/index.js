@@ -82,24 +82,28 @@ function detectDevice() {
         // Extra large
         case "4px":
             $("#splash > section > div").addClass("ijl-splash-wrapper");
+            $("#splash > section > div").css({"margin": "0"});
 
             break;
 
         // Large
         case "3px":
             $("#splash > section > div").addClass("ijl-splash-wrapper");
+            $("#splash > section > div").css({"margin": "0"});
 
             break;
 
         // Medium
         case "2px":
             $("#splash > section > div").removeClass("ijl-splash-wrapper");
+            $("#splash > section > div").css({"margin": "1em 0 2.5em 0"});
 
             break;
 
         // Small
         case "1px":
             $("#splash > section > div").removeClass("ijl-splash-wrapper");
+            $("#splash > section > div").css({"margin": "1em 0 2.5em 0"});
 
             break;
 
