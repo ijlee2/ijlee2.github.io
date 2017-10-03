@@ -119,7 +119,8 @@ nav #ijl-menu-desktop li:last-child {
 }
 
 .ijl-menu-items-mobile {
-    font-size     : 1em !important;
+    font-size     : 1.05em !important;
+    letter-spacing: 0.09em;
     height        : 100% !important;
     padding-top   : 0.75em !important;
     padding-bottom: 0.75em !important;
@@ -169,14 +170,14 @@ footer a:hover {
 .cover_video {
     -webkit-filter: brightness(1.33) contrast(1.6) opacity(0.42) sepia(0.06) saturate(1.15);
             filter: brightness(1.33) contrast(1.6) opacity(0.42) sepia(0.06) saturate(1.15);
-    position  : absolute;
-    width     : 100%;
-    height    : calc(100% + 2.25*var(--height-nav));
-    top       : 50%;
-    left      : 50%;
-    transform : translate(-50%, calc(-50% + var(--height-nav)));
-    object-fit: cover;
-    z-index   : -1;
+    position      : absolute;
+    width         : 100%;
+    height        : calc(100% + 2.25*var(--height-nav));
+    top           : 50%;
+    left          : 50%;
+    transform     : translate(-50%, calc(-50% + var(--height-nav)));
+    object-fit    : cover;
+    z-index       : -1;
 }
 
 /* About Me */
