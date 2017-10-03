@@ -81,26 +81,26 @@ function detectDevice() {
     switch ($("#ijl-device-detector").css("font-size")) {
         // Extra large
         case "4px":
-            deviceType = "Extra Large";
+            $("#splash > section > div").addClass("ijl-splash-wrapper");
+
             break;
 
         // Large
         case "3px":
-            deviceType = "Large";
+            $("#splash > section > div").addClass("ijl-splash-wrapper");
+
             break;
 
         // Medium
         case "2px":
-            deviceType = "Medium";
-
-            // Remove vertical centering in Splash
-            $(".ijl-splash-wrapper").css({"display": "block"});
+            $("#splash > section > div").removeClass("ijl-splash-wrapper");
 
             break;
 
         // Small
         case "1px":
-            deviceType = "Small";
+            $("#splash > section > div").removeClass("ijl-splash-wrapper");
+
             break;
 
     }
