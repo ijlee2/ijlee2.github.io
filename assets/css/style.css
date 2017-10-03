@@ -195,18 +195,33 @@ footer a:hover {
     width         : 100%;
 }
 
+#portfolio a:hover {
+    text-decoration: underline;
+}
+
 .chip {
     font-size    : 0.75em;
     margin-top   : 0.45em;
     margin-bottom: 0.22em;
 }
 
-
 /* Contact */
 #ijl-follow-me li {
     font-size    : 1.6em;
     float        : left;
     padding-right: 0.9em;
+}
+
+#ijl-follow-me li:hover {
+    transform: scale(1.05);
+}
+
+#ijl-email-phone {
+    line-height: 1.9em;
+}
+
+#ijl-email-phone a:hover {
+    text-decoration: underline;
 }
 
 
@@ -227,13 +242,6 @@ footer a:hover {
 
 /* Desktop */
 @media all and (max-width: 1200px), all and (max-device-width: 1200px) {
-    .mai-card img {
-        height: 460px;
-    }
-
-    .mai-card-preview img {
-        height: 200px;
-    }
 }
 
 /* Tablet */
@@ -258,18 +266,6 @@ footer a:hover {
         margin-left: 0;
     }
 
-    .mai-card img {
-        height: 300px;
-    }
-
-    .mai-card-preview img {
-        height: 240px;
-    }
-
-    .card p {
-        font-size: 1em !important;
-    }
-
     .cover_video {
         visibility: hidden;
     }
@@ -277,11 +273,4 @@ footer a:hover {
 
 /* Mobile */
 @media all and (max-width: 600px), all and (max-device-width: 600px) {
-    .mai-card img {
-        height: 280px;
-    }
-
-    .mai-card-preview img {
-        height: 280px;
-    }
 }

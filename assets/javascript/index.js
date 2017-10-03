@@ -1,11 +1,58 @@
 /****************************************************************************
- ****************************************************************************
-    
-    Initialize
-    
-*****************************************************************************
+
+    Initialization for scroll
+
 *****************************************************************************/
-// Descriptions of me
+const articleLocations = [];
+
+$.each($("article"), (index, article) => {
+    // Find where each article starts
+    articleLocations.push(Math.floor($(article).position().top) - 150);
+
+});
+
+// Account for the fact that the last article doesn't have much height
+articleLocations[articleLocations.length - 1] -= 400;
+
+function checkSlide(event) {
+    const myLocation = $(window).scrollTop();
+
+    for (let i = 0; i < articleLocations.length; i++) {
+        if (myLocation >= articleLocations[i]) {
+            $("#ijl-menu-desktop > *").removeClass("active cyan darken-3");
+            $(`#ijl-menu-desktop > li:nth-of-type(${i})`).addClass("active cyan darken-3");
+        }
+    }
+}
+
+// Stop a function from running too many times
+function debounce(func, wait = 10, immediate = true) {
+    let timeout;
+
+    return function() {
+        const context = this, args = arguments;
+
+        function later() {
+            timeout = null;
+
+            if (!immediate) func.apply(context, args);
+        };
+
+        const callNow = immediate && !timeout;
+        
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        
+        if (callNow) func.apply(context, args);
+    };
+}
+
+
+/****************************************************************************
+
+    Initialization for splash
+
+*****************************************************************************/
 const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
 const iam_length = iam.length;
 
@@ -23,13 +70,10 @@ function collatz(n) {
 }
 
 
-
 /****************************************************************************
- ****************************************************************************
     
     Wait for user response
     
-*****************************************************************************
 *****************************************************************************/
 $(document).ready(function() {
     /************************************************************************
@@ -42,7 +86,15 @@ $(document).ready(function() {
 
     /************************************************************************
     
-        Scroll to anchor tags
+        Scroll
+
+    *************************************************************************/
+    window.addEventListener("scroll", debounce(checkSlide));
+
+
+    /************************************************************************
+    
+        Jump to articles
 
     *************************************************************************/
     $(".brand-logo").click(function() {
@@ -51,7 +103,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const destination = -$("nav").height();
-        const duration    = Math.trunc(0.45 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -67,7 +119,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = $(section).offset().top - $("nav").height();
-        const duration    = Math.trunc(0.45 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
