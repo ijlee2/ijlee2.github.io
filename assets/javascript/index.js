@@ -158,7 +158,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const section     = $(this).attr("href");
-        const destination = $(section).offset().top - $("nav").height();
+        const destination = Math.ceil($(section).offset().top - $("nav").height());
         const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
@@ -174,7 +174,7 @@ $(document).ready(function() {
 
         // Find where to go and how fast
         const section     = $(this).attr("href");
-        const destination = $(section).offset().top - $("nav").height();
+        const destination = Math.ceil($(section).offset().top - $("nav").height());
         const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
