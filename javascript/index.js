@@ -137,7 +137,10 @@ $(document).ready(function() {
         Jump to articles
 
     *************************************************************************/
-    $(".brand-logo").click(function() {
+    $(".brand-logo").click(function(event) {
+        // Hide anchor tag in the URL
+        event.preventDefault();
+
         // Remove highlight
         $("#ijl-menu-desktop > *").removeClass("active cyan darken-3");
 
@@ -148,7 +151,10 @@ $(document).ready(function() {
         $("html, body").animate({"scrollTop": destination}, duration);
     });
 
-    $(".ijl-menu-items-desktop").click(function() {
+    $(".ijl-menu-items-desktop").click(function(event) {
+        // Hide anchor tag in the URL
+        event.preventDefault();
+
         // Find which menu item was clicked
         const index = $(".ijl-menu-items-desktop").index(this);
         
@@ -164,7 +170,10 @@ $(document).ready(function() {
         $("html, body").animate({"scrollTop": destination}, duration);
     });
 
-    $(".ijl-menu-items-mobile").click(function() {
+    $(".ijl-menu-items-mobile").click(function(event) {
+        // Hide anchor tag in the URL
+        event.preventDefault();
+
         // Find which menu item was clicked
         const index = $(".ijl-menu-items-mobile").index(this);
         
