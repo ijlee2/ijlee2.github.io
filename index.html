@@ -32,7 +32,7 @@
                         <a href="#" data-activates="ijl-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
                         
                         <!-- Desktop -->
-                        <ul class="right hide-on-med-and-down" id="ijl-menu-desktop">
+                        <ul class="hide-on-med-and-down right" id="ijl-menu-desktop">
                             <li><a href="#about-me" class="ijl-menu-items-desktop">About Me</a></li>
                             <li><a href="#expertise" class="ijl-menu-items-desktop">Expertise</a></li>
                             <li><a href="#portfolio" class="ijl-menu-items-desktop">Portfolio</a></li>
@@ -50,24 +50,37 @@
                 <li><a href="#contact" class="ijl-menu-items-mobile">Contact</a></li>
             </ul>
         </header>
+
+        <div id="ijl-device-detector"></div>
         
         <article id="splash">
             <section class="container">
-                <!-- TODO: Remove valign-wrapper for mobile -->
-                <div class="row ijl-splash-wrapper">
+                <div class="hide-on-med-and-down row ijl-splash-wrapper">
                     <div class="col s12 xl10 offset-xl1 z-depth-2 hoverable">
                         <div class="row">
                             <div class="col s10 offset-s1">
                                 <div class="ijl-separator-3"></div>
                                 
-                                <h1 id="who-am-i" class="center-align">Isaac J. Lee</h1>
+                                <h1 class="ijl-who center-align">Isaac J. Lee</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="show-on-med-and-down row">
+                    <div class="col s12 xl10 offset-xl1 z-depth-2 hoverable">
+                        <div class="row">
+                            <div class="col s10 offset-s1">
+                                <div class="ijl-separator-3"></div>
+                                
+                                <h1 class="ijl-who center-align">Isaac J. Lee</h1>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Video -->
-                <video class="cover_video" src="assets/videos/developer.mp4" autoplay loop></video>
+                <video class="hide-on-med-and-down cover_video" src="assets/videos/developer.mp4" autoplay loop></video>
             </section>
         </article>
 
@@ -83,7 +96,7 @@
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2 center-align">
                                 <div class="ijl-separator-3"></div>
 
-                                <p>Full stack developer with 8.5 year experience in research + teaching.</p>
+                                <p>Full stack developer with 8.5 year experience in research & teaching.</p>
                                 <p>Driven to <strong>write simple, lasting code</strong> and <strong>utilize the latest web technologies</strong>.</p>
                                 <p>Pro in continuous learning + communication + collaboration.</p>
 
@@ -237,7 +250,7 @@
                                 <h3>Mai</h3>
                                 <p>With Mai, you can share photos like Facebook and Instagram. Take one step further by letting Mai write stories for you.</p>
 
-                                <p>Roles: Project Manager, Lead Developer (team of 4)</p>
+                                <p>Roles: Team Lead, Lead Developer (team of 4)</p>
 
                                 <span class="chip cyan lighten-4">Flexbox</span>
                                 <span class="chip cyan lighten-4">Materialize</span>
@@ -290,7 +303,7 @@
                                 <h3>LocALL</h3>
                                 <p>For places to eat, to play, and to drink in Austin, choose LocALL. We give you the best recommendations in an instant!</p>
 
-                                <p>Roles: Project Manager, Lead Developer (team of 4)</p>
+                                <p>Roles: Team Lead, Lead Developer (team of 4)</p>
 
                                 <span class="chip cyan lighten-4">Bootstrap</span>
                                 <span class="chip cyan lighten-4">CSS Grid</span>
@@ -398,14 +411,13 @@
                                 <h3>Central Austin Toastmasters</h3>
                                 <p>A brand new site that helped my club find 27 new members and reach top 5% in one year. No other club provides a feature-rich, mobile-friendly website.</p>
 
-                                <p>Roles: Project Manager, Webmaster, Content Creator (team of 10)</p>
+                                <p>Roles: Team Lead, Webmaster, Content Creator (team of 10)</p>
 
                                 <span class="chip cyan lighten-4">Wix</span>
                                 <span class="chip amber accent-1">Google Sheets</span>
                                 <span class="chip amber accent-1">ES7</span>
                                 <span class="chip light-green lighten-3">Data Science</span>
                                 <span class="chip light-green lighten-3">Google Analytics</span>
-                                <span class="chip light-green lighten-3">Ulead PhotoImpact</span>
 
                                 <ul class="teal-text text-lighten-5">
                                     <li><a href="https://www.centralaustin.org" target="_blank" class="cyan-text text-darken-2">Open Central Austin Toastmasters app</a></li>
@@ -528,7 +540,7 @@
                                 <h3>Nonograms</h3>
                                 <p>Developed a new way to solve nonograms using compressive sensing.</p>
 
-                                <p>Roles: Project Manager, Developer (team of 2)</p>
+                                <p>Roles: Team Lead, Developer (team of 2)</p>
 
                                 <span class="chip amber accent-1">Matlab</span>
                                 <span class="chip light-green lighten-3">Compressive Sensing</span>
@@ -567,7 +579,7 @@
                                 <h3>Tutor Scheduler</h3>
                                 <p>Helped Student Support Services assign tutors to students.</p>
 
-                                <p>Roles: Project Manager, Lead Developer (team of 3)</p>
+                                <p>Roles: Team Lead, Lead Developer (team of 3)</p>
 
                                 <span class="chip cyan lighten-4">jQuery</span>
                                 <span class="chip amber accent-1">Java</span>

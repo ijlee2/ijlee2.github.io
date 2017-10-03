@@ -75,7 +75,45 @@ function collatz(n) {
     Wait for user response
     
 *****************************************************************************/
+let deviceType;
+
+function detectDevice() {
+    switch ($("#ijl-device-detector").css("font-size")) {
+        // Extra large
+        case "4px":
+            deviceType = "Extra Large";
+            break;
+
+        // Large
+        case "3px":
+            deviceType = "Large";
+            break;
+
+        // Medium
+        case "2px":
+            deviceType = "Medium";
+
+            // Remove vertical centering in Splash
+            $(".ijl-splash-wrapper").css({"display": "block"});
+
+            break;
+
+        // Small
+        case "1px":
+            deviceType = "Small";
+            break;
+
+    }
+
+    console.log(deviceType);
+}
+
+$(window).resize(debounce(detectDevice));
+
 $(document).ready(function() {
+    detectDevice();
+
+
     /************************************************************************
     
         Navbar
@@ -131,7 +169,7 @@ $(document).ready(function() {
 
     *************************************************************************/
     let str_previous = "",
-        str_current  = $("#who-am-i").text(),
+        str_current  = $(".ijl-who").text(),
         str_new;
 
     setInterval(() => {
@@ -154,11 +192,11 @@ $(document).ready(function() {
             count++;
 
             if (count < 20) {
-                $("#who-am-i").text(str_current_array.join(""));
+                $(".ijl-who").text(str_current_array.join(""));
 
             } else {
                 // Display new text
-                $("#who-am-i").text(str_new);
+                $(".ijl-who").text(str_new);
 
                 // Update
                 str_previous = str_current;

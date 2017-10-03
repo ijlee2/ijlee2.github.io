@@ -34,6 +34,10 @@ body {
     line-height      : 1.6em;
 }
 
+#ijl-device-detector {
+    font-size: 4px;
+}
+
 /* Fonts */
 h1, h2, nav {
     font-family: var(--font-highlight);
@@ -247,16 +251,15 @@ footer a:hover {
 
 /* Desktop */
 @media all and (max-width: 1200px), all and (max-device-width: 1200px) {
+    #ijl-device-detector {
+        font-size: 3px;
+    }
 }
 
 /* Tablet */
 @media all and (max-width: 992px), all and (max-device-width: 992px) {
-    .mai-desktop-page {
-        display: none;
-    }
-
-    .mai-mobile-page {
-        display: block;
+    #ijl-device-detector {
+        font-size: 2px;
     }
 
     h1 {
@@ -270,12 +273,11 @@ footer a:hover {
     nav .brand-logo {
         margin-left: 0;
     }
-
-    .cover_video {
-        visibility: hidden;
-    }
 }
 
 /* Mobile */
 @media all and (max-width: 600px), all and (max-device-width: 600px) {
+    #ijl-device-detector {
+        font-size: 1px;
+    }
 }
