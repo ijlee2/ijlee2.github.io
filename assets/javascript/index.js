@@ -108,8 +108,6 @@ function detectDevice() {
             break;
 
     }
-
-    console.log(deviceType);
 }
 
 $(window).resize(debounce(detectDevice));

@@ -329,7 +329,25 @@ footer a:hover {
         letter-spacing: calc(0.25em * 1.7/3.4);
     }
 
+    h2 {
+        font-size     : calc(4.2em * 1.7/3.4);
+        letter-spacing: calc(0.5em * 1.7/3.4);
+    }
+
+    article header {
+        height: calc(240px * 1.7/3.4);
+    }
+
+    .parallax-container {
+        height: calc(360px * 1.7/3.4);
+    }
+
+    .parallax > div {
+        font-size     : calc(3.6em * 1.7/3.4);
+        letter-spacing: calc(0.22em * 1.7/3.4);
+    }
+
     #ijl-follow-me li {
-        line-height: 2em;
+        line-height: 1.4em;
     }
 }
