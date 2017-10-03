@@ -164,6 +164,11 @@ footer a:hover {
     z-index   : -1;
 }
 
+/* About Me */
+#about-me a {
+    font-size: 0.9em;
+}
+
 /* Expertise */
 .ijl-expertise {
     border-radius: 6px;
