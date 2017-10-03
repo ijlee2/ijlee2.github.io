@@ -291,7 +291,7 @@ footer a:hover {
     }
 
     body {
-        font-size: 16px;
+        font-size: 17px;
     }
 
     h1 {
@@ -325,26 +325,26 @@ footer a:hover {
     }
 
     h1 {
-        font-size     : 1.7em;
-        letter-spacing: calc(0.25em * 1.7/3.4);
+        font-size     : 1.6em;
+        letter-spacing: calc(0.25em * 1.6/3.4);
     }
 
     h2 {
-        font-size     : calc(4.2em * 1.7/3.4);
-        letter-spacing: calc(0.5em * 1.7/3.4);
+        font-size     : calc(4.2em * 1.6/3.4);
+        letter-spacing: calc(0.5em * 1.6/3.4);
     }
 
     article header {
-        height: calc(240px * 1.7/3.4);
+        height: calc(240px * 1.6/3.4);
     }
 
     .parallax-container {
-        height: calc(360px * 1.7/3.4);
+        height: calc(360px * 1.6/3.4);
     }
 
     .parallax > div {
-        font-size     : calc(3.6em * 1.7/3.4);
-        letter-spacing: calc(0.22em * 1.7/3.4);
+        font-size     : calc(3.6em * 1.6/3.4);
+        letter-spacing: calc(0.22em * 1.6/3.4);
     }
 
     #ijl-follow-me li {
