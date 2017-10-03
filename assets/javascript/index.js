@@ -53,7 +53,7 @@ function debounce(func, wait = 10, immediate = true) {
     Initialization for splash
 
 *****************************************************************************/
-const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
+const iam        = ["Analyst", "Coffee Lover", "Designer", "Developer", "Educator", "Engineer", "Experimenter", "Friend", "Helper", "Leader", "Listener", "Mathematician", "Mentor", "Music Lover", "Public Speaker", "Researcher", "Rock Climber", "Runner", "Storyteller", "Visionary", "Volunteer"];
 const iam_length = iam.length;
 
 // Allowable ASCII values
