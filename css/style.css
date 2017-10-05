@@ -15,6 +15,7 @@
 
     /* Define color scheme */
     --color-blue-grey-lighten-5: #bbb;
+    --color-white-transparent  : rgba(255, 255, 255, 0.93);
 }
 
 
