@@ -75,32 +75,18 @@ function collatz(n) {
     Wait for user response
     
 *****************************************************************************/
-let deviceType;
-
 function detectDevice() {
     switch ($("#ijl-device-detector").css("font-size")) {
-        // Extra large
+        // Extra large, large
         case "4px":
-            $("#splash > section > div").addClass("ijl-splash-wrapper");
-            $("#splash > section > div").css({"margin": "0"});
-
-            break;
-
-        // Large
         case "3px":
             $("#splash > section > div").addClass("ijl-splash-wrapper");
             $("#splash > section > div").css({"margin": "0"});
 
             break;
 
-        // Medium
+        // Medium, small
         case "2px":
-            $("#splash > section > div").removeClass("ijl-splash-wrapper");
-            $("#splash > section > div").css({"margin": "1em 0 2.5em 0"});
-
-            break;
-
-        // Small
         case "1px":
             $("#splash > section > div").removeClass("ijl-splash-wrapper");
             $("#splash > section > div").css({"margin": "1em 0 2.5em 0"});
@@ -110,12 +96,12 @@ function detectDevice() {
     }
 }
 
+// Check device size before page loads and when window is resized
+detectDevice();
+
 $(window).resize(debounce(detectDevice));
 
 $(document).ready(function() {
-    detectDevice();
-
-
     /************************************************************************
     
         Navbar
@@ -187,8 +173,6 @@ $(document).ready(function() {
         const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
-
-        // Close the mobile menu
     });
 
 
