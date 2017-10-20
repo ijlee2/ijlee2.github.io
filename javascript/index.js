@@ -11,6 +11,9 @@ $.each($("article"), (index, article) => {
 
 });
 
+// Account for the fact that the last article doesn't have much height
+articleLocations[articleLocations.length - 1] -= 400;
+
 function checkSlide(event) {
     const myLocation = $(window).scrollTop();
 
