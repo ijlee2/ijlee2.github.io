@@ -11,9 +11,6 @@ $.each($("article"), (index, article) => {
 
 });
 
-// Account for the fact that the last article doesn't have much height
-articleLocations[articleLocations.length - 1] -= 400;
-
 function checkSlide(event) {
     const myLocation = $(window).scrollTop();
 
@@ -151,7 +148,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = Math.ceil($(section).offset().top - $("nav").height());
-        const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = (section === "#contact") ? 0 : Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
@@ -170,7 +167,7 @@ $(document).ready(function() {
         // Find where to go and how fast
         const section     = $(this).attr("href");
         const destination = Math.ceil($(section).offset().top - $("nav").height());
-        const duration    = Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
+        const duration    = (section === "#contact") ? 0 : Math.trunc(0.4 * Math.abs(destination - $(document).scrollTop()));
         
         $("html, body").animate({"scrollTop": destination}, duration);
     });
