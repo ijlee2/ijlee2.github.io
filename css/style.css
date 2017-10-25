@@ -96,6 +96,8 @@ nav .brand-logo {
 nav .ijl-menu-items-desktop {
     font-size     : 0.75em;
     letter-spacing: 0.1em;
+    margin-left   : 0.2em;
+    margin-right  : 0.2em;
 }
 
 nav #ijl-menu-desktop li:last-child {
