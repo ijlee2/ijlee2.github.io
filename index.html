@@ -2,11 +2,23 @@
 <html lang="en" prefix="og: http://ogp.me/ns#">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Isaac J. Lee, Full Stack Developer">
         <meta name="keywords" content="Isaac J. Lee, developer, full stack, expertise, skills, portfolio, resume, contact, Mai, LocALL, crunchingnumbers">
         <meta name="author" content="Isaac J. Lee">
-        
+
+        <!-- Manifest -->
+        <link rel="manifest" href="manifest.json">
+
+        <meta name="mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="application-name" content="Isaac J. Lee">
+        <meta name="apple-mobile-web-app-title" content="Isaac J. Lee">
+        <meta name="theme-color" content="#212121">
+        <meta name="msapplication-navbutton-color" content="#212121">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+        <meta name="msapplication-starturl" content="/">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
         <!-- Open Graph -->
         <meta property="og:title" content="Isaac J. Lee">
         <meta property="og:type" content="website">
@@ -14,11 +26,12 @@
         <meta property="og:url" content="https://ijlee2.github.io">
         <meta property="og:image" content="https://raw.githubusercontent.com/ijlee2/ijlee2.github.io/master/images/splash.jpg">
         <meta property="og:image:alt" content="Portfolio of Isaac J. Lee">
-        
+
         <title>Isaac J. Lee</title>
 
         <!-- Favicon -->
-        <link rel="icon" type="image/png" href="images/favicon.png">
+        <link rel="icon" type="image/png" sizes="256x256" href="images/favicon.png">
+        <link rel="apple-touch-icon" type="image/png" sizes="256x256" href="images/favicon.png">
 
         <!-- Import fonts -->
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -35,7 +48,7 @@
         <script async src="https://www.googletagmanager.com/gtag/js?id=UA-84643077-4"></script>
         <script>
             window.dataLayer = window.dataLayer || [];
-            
+
             function gtag() { dataLayer.push(arguments) };
             gtag("js", new Date());
             gtag("config", "UA-84643077-4");
@@ -48,7 +61,7 @@
                     <div class="nav-wrapper grey darken-4">
                         <a href="#" class="brand-logo">IJL</a>
                         <a href="#" data-activates="ijl-menu-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
-                        
+
                         <ul class="hide-on-med-and-down right" id="ijl-menu-desktop">
                             <li><a href="#about-me" class="ijl-menu-items-desktop">About Me</a></li>
                             <li><a href="#expertise" class="ijl-menu-items-desktop">Expertise</a></li>
@@ -58,7 +71,7 @@
                     </div>
                 </nav>
             </div>
-                    
+
             <ul class="side-nav blue-grey lighten-5" id="ijl-menu-mobile">
                 <li class="brand-logo-mobile center-align">Isaac J. Lee</li>
                 <li class="divider"></li>
@@ -78,7 +91,7 @@
                         <div class="row">
                             <div class="col s10 offset-s1">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h1 class="ijl-who center-align">Isaac J. Lee</h1>
                             </div>
                         </div>
@@ -128,7 +141,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2 center-align">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <p>My unique background in <strong>Computational Science, Engineering, and Mathematics</strong> helps me apply new ideas and skills fast (4 - 15X).</p>
                             </div>
                         </div>
@@ -251,7 +264,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>Mai</h3>
                                 <p>With Mai, you can share photos like Facebook and Instagram. Mai takes one step further by writing stories for you.</p>
 
@@ -305,7 +318,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>LocALL</h3>
                                 <p>For places to eat, to play, and to drink in Austin, choose LocALL. We give you the best recommendations in an instant!</p>
 
@@ -351,7 +364,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>UT Coding Boot Camp</h3>
                                 <p>Completed all exercises, homework, and projects on time. Simultaneously worked on <a href="https://github.com/ijlee2/freeCodeCamp" target="_blank" rel="noopener" class="cyan-text text-darken-2">freeCodeCamp</a>, <a href="https://github.com/ijlee2/JavaScript-30" target="_blank" rel="noopener" class="cyan-text text-darken-2">JavaScript 30</a>, <a href="https://github.com/ijlee2/What-The-Flexbox" target="_blank" rel="noopener" class="cyan-text text-darken-2">What The Flexbox</a>, and <a href="https://github.com/ijlee2/Learn-Redux" target="_blank" rel="noopener" class="cyan-text text-darken-2">Learn Redux.</a>
 
@@ -413,7 +426,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>Central Austin Toastmasters</h3>
                                 <p>Brand new site that helped my club find 27 new members and reach top 5% in a year. No other club provides a feature-rich, mobile-friendly website.</p>
 
@@ -438,7 +451,7 @@
             <div class="parallax-container">
                 <div class="parallax">
                     <img data-src="images/banner_crunchingnumbers.jpg" alt="crunchingnumbers.live">
-                    
+
                     <div class="row">
                         <div class="col s10 offset-s1">
                             <div class="grey-text text-darken-4 center-align">crunchingnumbers.live</div>
@@ -453,7 +466,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>crunchingnumbers.live</h3>
                                 <p>A technical blog that I write for a non-technical audience worldwide. Explore math and computer science with me today!</p>
 
@@ -502,7 +515,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>Isogeometric Analysis</h3>
                                 <p>Finite Element Analysis library that helped me test phase field models for fracture. Supports B-splines, NURBS, hpk-refinement, time marching, and visualization.</p>
 
@@ -542,7 +555,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>Nonograms</h3>
                                 <p>Developed a new way to solve nonograms using compressive sensing.</p>
 
@@ -581,7 +594,7 @@
                         <div class="row">
                             <div class="col s12 l10 offset-l1 xl8 offset-xl2">
                                 <div class="ijl-separator-3"></div>
-                                
+
                                 <h3>Tutor Scheduler</h3>
                                 <p>Helped Student Support Services assign tutors to students.</p>
 
