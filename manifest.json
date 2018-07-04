@@ -5,6 +5,7 @@
     "lang": "en-US",
     "start_url": "/",
     "display": "browser",
+    "background_color": "#fff",
     "theme_color": "#212121",
     "icons": [
         {
