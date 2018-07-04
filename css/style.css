@@ -225,14 +225,14 @@ footer a:hover {
 }
 
 /* Contact */
-#ijl-follow-me a {
+#ijl-follow-me div {
     font-size    : 1.6em;
     line-height  : 1.4em;
     float        : left;
     padding-right: 0.9em;
 }
 
-#ijl-follow-me a:hover {
+#ijl-follow-me div:hover {
     transform: scale(1.05);
 }
 
@@ -289,7 +289,7 @@ footer a:hover {
         letter-spacing: calc(0.22em * 2.6/3.4);
     }
 
-    #ijl-follow-me a {
+    #ijl-follow-me div {
         line-height: 1.8em;
     }
 }
@@ -361,7 +361,7 @@ footer a:hover {
         letter-spacing: calc(0.22em * 17/20 * 1.6/3.4);
     }
 
-    #ijl-follow-me a {
+    #ijl-follow-me div {
         line-height: 1.4em;
     }
 }
