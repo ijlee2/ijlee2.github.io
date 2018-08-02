@@ -14,6 +14,7 @@
     --height-nav: 40px;
 
     /* Define color scheme */
+    --color-cyan-darken-2      : #0097a7;
     --color-blue-grey-lighten-5: #bbb;
     --color-white-transparent  : rgba(255, 255, 255, 0.93);
 }
@@ -236,6 +237,13 @@ footer a:hover {
     transform: scale(1.05);
 }
 
+#ijl-follow-me svg {
+    fill: var(--color-cyan-darken-2);
+    width: 1em;
+    height: 1em;
+    margin-top: 0.1em;
+}
+
 #ijl-email-phone {
     line-height: 1.9em;
 }
@@ -291,6 +299,10 @@ footer a:hover {
 
     #ijl-follow-me div {
         line-height: 1.8em;
+    }
+
+    #ijl-follow-me svg {
+        margin-top: 0.38em;
     }
 }
 
@@ -363,5 +375,9 @@ footer a:hover {
 
     #ijl-follow-me div {
         line-height: 1.4em;
+    }
+
+    #ijl-follow-me svg {
+        margin-top: 0.13em;
     }
 }
