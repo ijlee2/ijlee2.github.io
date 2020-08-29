@@ -182,4 +182,5 @@ jobs:
       - name: Deploy
         run: yarn deploy --verbose
         env:
+          CI: true
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
