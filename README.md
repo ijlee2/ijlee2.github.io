@@ -1,4 +1,4 @@
-[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/ijlee2.github.io/workflows/CI/badge.svg)](https://github.com/ijlee2/ijlee2.github.io/actions?query=workflow%3ACI)
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/ijlee2.github.io/workflows/CI/CD/badge.svg)](https://github.com/ijlee2/ijlee2.github.io/actions?query=workflow%3ACI%2FCD)
 [![This project uses Percy.io for visual regression testing.](https://percy.io/static/images/percy-badge.svg)](https://percy.io/Isaac/ijlee2.github.io)
 
 # ijlee2.github.io
@@ -28,11 +28,14 @@ yarn test
 ```
 
 
-## Deploying
+## Continuous deployment
 
-The app is deployed to the `gh-pages` branch for GitHub Pages. The deploy pipleline uses [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git).
+The app is deployed to the `gh-pages` branch for GitHub Pages. The deploy pipleline uses 2 [ember-cli-deploy](http://ember-cli-deploy.com/) plugins:
 
-Run the following command to deploy:
+- [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git)
+- [ember-cli-deploy-git-ci](https://github.com/dfreeman/ember-cli-deploy-git-ci)
+
+Run the following command to deploy from local machine:
 
 ```bash
 yarn deploy
