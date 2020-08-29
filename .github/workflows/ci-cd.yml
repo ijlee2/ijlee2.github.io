@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on: 
   push:
@@ -180,6 +180,6 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Deploy
-        run: yarn deploy --verbose
+        run: yarn deploy
         env:
           DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
