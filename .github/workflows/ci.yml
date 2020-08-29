@@ -12,21 +12,6 @@ env:
   PERCY_PARALLEL_TOTAL: 9
 
 jobs:
-  check-properties:
-    name: Check properties (temporary)
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
-    steps:
-      - name: Log github.ref
-        run: echo ${{ github.ref }}
-
-      - name: Log github.head_ref
-        run: echo ${{ github.head_ref }}
-
-      - name: Log github.base_ref
-        run: echo ${{ github.base_ref }}
-
-
   build-ember-app:
     name: Build Ember app
     runs-on: ubuntu-latest
@@ -195,4 +180,6 @@ jobs:
         if: steps.cache-dependencies.outputs.cache-hit != 'true'
 
       - name: Deploy
-        run: yarn deploy
+        run: yarn deploy --verbose
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
