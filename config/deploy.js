@@ -7,12 +7,7 @@ module.exports = function(deployTarget) {
 
     // include other plugin configuration that applies to all deploy targets here
     git: {
-      repo: 'git@github.com:ijlee2/ijlee2.github.io.git',
-    },
-
-    'git-ci': {
-      enabled: true,
-      deployKey: process.env.SECRET_KEY,
+      repo: 'https://github.com/ijlee2/ijlee2.github.io.git',
     },
   };
 

@@ -20,7 +20,7 @@ yarn start
 
 The app uses a custom workflow in order to achieve [cross-resolution testing](https://crunchingnumbers.live/2020/06/07/container-queries-cross-resolution-testing/).
 
-Run the following commands to lint and test:
+Run the following commands to lint and test from local machine:
 
 ```bash
 yarn lint
@@ -30,10 +30,7 @@ yarn test
 
 ## Continuous deployment
 
-The app is deployed to the `gh-pages` branch for GitHub Pages. The deploy pipleline uses 2 [ember-cli-deploy](http://ember-cli-deploy.com/) plugins:
-
-- [ember-cli-deploy-git](https://github.com/ef4/ember-cli-deploy-git)
-- [ember-cli-deploy-git-ci](https://github.com/dfreeman/ember-cli-deploy-git-ci)
+The app is deployed to the `gh-pages` branch for GitHub Pages.
 
 Run the following command to deploy from local machine:
 
